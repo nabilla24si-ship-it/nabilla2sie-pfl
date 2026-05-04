@@ -1,4 +1,4 @@
-import { FaThLarge, FaList, FaHeadphonesAlt } from "react-icons/fa";
+import { FaThLarge, FaList, FaHeadphonesAlt, FaBox } from "react-icons/fa"; // Tambahkan FaBox di sini
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
@@ -10,7 +10,7 @@ export default function Sidebar() {
     }`;
 
   return (
-    <div id="sidebar" className="w-[280px] bg-white border-r min-h-screen p-6 flex flex-column gap-6">
+    <div id="sidebar" className="w-[280px] bg-white border-r min-h-screen p-6 flex flex-col gap-6">
       <div id="sidebar-logo" className="mb-8">
         <span id="logo-title" className="text-2xl font-bold">Sedap <b className="text-hijau">.</b></span>
         <p className="text-gray-400 text-sm">Modern Admin Dashboard</p>
@@ -19,15 +19,24 @@ export default function Sidebar() {
       <nav className="flex-1">
         <ul className="space-y-2 list-none p-0">
 
-            <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">Test Errors</li>
-<li><NavLink to="/error-400" className={menuClass}>Error 400</NavLink></li>
-<li><NavLink to="/error-401" className={menuClass}>Error 401</NavLink></li>
-<li><NavLink to="/error-403" className={menuClass}>Error 403</NavLink></li>
+          <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">Test Errors</li>
+          <li><NavLink to="/error-400" className={menuClass}>Error 400</NavLink></li>
+          <li><NavLink to="/error-401" className={menuClass}>Error 401</NavLink></li>
+          <li><NavLink to="/error-403" className={menuClass}>Error 403</NavLink></li>
+          
           <li>
             <NavLink to="/" className={menuClass}>
               <FaThLarge /> <span>Dashboard</span>
             </NavLink>
           </li>
+          
+          {/* 👇 Menu Products ditambahkan di sini */}
+          <li>
+            <NavLink to="/products" className={menuClass}>
+              <FaBox /> <span>Products</span>
+            </NavLink>
+          </li>
+
           <li>
             <NavLink to="/orders" className={menuClass}>
               <FaList /> <span>Orders</span>
