@@ -1,6 +1,7 @@
 import { FaThLarge, FaList, FaHeadphonesAlt, FaBox } from "react-icons/fa"; // Tambahkan FaBox di sini
 import { NavLink } from "react-router-dom";
 
+
 export default function Sidebar() {
   const menuClass = ({ isActive }) =>
     `flex cursor-pointer items-center rounded-xl p-4 space-x-3 transition-all
@@ -40,6 +41,11 @@ export default function Sidebar() {
           <li>
             <NavLink to="/orders" className={menuClass}>
               <FaList /> <span>Orders</span>
+            </NavLink>
+          </li>
+           <li>
+            <NavLink to="/components" className={menuClass}>
+              <FaList /> <span>components</span>
             </NavLink>
           </li>
           <li>

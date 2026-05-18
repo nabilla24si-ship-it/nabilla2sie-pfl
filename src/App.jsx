@@ -9,6 +9,7 @@ const Dashboard = React.lazy(() => import("./pages/main/Dashboard"));
 const Orders = React.lazy(() => import("./pages/main/Orders"));
 const Customers = React.lazy(() => import("./pages/main/Customers"));
 const NotFound = React.lazy(() => import("./pages/main/NotFound"));
+const Components = React.lazy(() => import("./pages/main/Components"));
 
 // 👇 Tambahkan import Products di sini (Sesuaikan path-nya jika Products.jsx ada di dalam folder main)
 const Products = React.lazy(() => import("./pages/main/Products")); 
@@ -32,7 +33,9 @@ export default function App() {
           
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
+          <Route path="/components" element={<Components />} />
           <Route path="*" element={<NotFound />} />
+
         </Route>
 
         {/* Auth Layout */}
