@@ -1,5 +1,5 @@
 import PageHeader from "../../components/PageHeader";
-import { Link } from "react-router-dom"; // Jangan lupa import Link untuk dynamic route
+import { Link } from "react-router-dom"; 
 
 export default function Products() {
   // Membuat 30 data dummy produk
