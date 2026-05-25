@@ -1,4 +1,4 @@
-import { FaThLarge, FaList, FaHeadphonesAlt, FaBox } from "react-icons/fa"; // Tambahkan FaBox di sini
+import { FaThLarge, FaList, FaHeadphonesAlt, FaBox, FaCogs } from "react-icons/fa"; // 1. Tambahkan FaCogs untuk icon Fitur Xyz
 import { NavLink } from "react-router-dom";
 
 
@@ -31,7 +31,6 @@ export default function Sidebar() {
             </NavLink>
           </li>
           
-          {/* 👇 Menu Products ditambahkan di sini */}
           <li>
             <NavLink to="/products" className={menuClass}>
               <FaBox /> <span>Products</span>
@@ -51,6 +50,13 @@ export default function Sidebar() {
           <li>
             <NavLink to="/customers" className={menuClass}>
               <FaHeadphonesAlt /> <span>Customers</span>
+            </NavLink>
+          </li>
+
+          {/* 👇 2. Menu Fitur Xyz ditambahkan di sini */}
+          <li>
+            <NavLink to="/fitur-xyz" className={menuClass}>
+              <FaCogs /> <span>Fitur Xyz</span>
             </NavLink>
           </li>
         </ul>
