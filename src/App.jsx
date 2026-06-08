@@ -12,9 +12,10 @@ const NotFound = React.lazy(() => import("./pages/main/NotFound"));
 const Components = React.lazy(() => import("./pages/main/Components"));
 const Products = React.lazy(() => import("./pages/main/Products")); 
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
-
-// 1. TAMBAHAN LAZY LOAD UNTUK FITUR XYZ
 const FiturXyz = React.lazy(() => import("./pages/main/FiturXyz"));
+
+// Lazy load baru untuk Fitur Notes
+const Notes = React.lazy(() => import("./pages/main/Notes"));
 
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Login = React.lazy(() => import("./pages/auth/Login"));
@@ -32,10 +33,12 @@ export default function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/components" element={<Components />} />
-          
-          {/* 2. TAMBAHAN ROUTE UNTUK FITUR XYZ */}
           <Route path="/fitur-xyz" element={<FiturXyz />} />
           
+          {/* Route Notes diletakkan di atas NotFound (*) */}
+          <Route path="/notes" element={<Notes />} />
+          
+          {/* Route '*' HARUS paling bawah di dalam grup layout */}
           <Route path="*" element={<NotFound />} />
         </Route>
 
