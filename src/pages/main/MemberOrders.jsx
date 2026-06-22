@@ -61,7 +61,7 @@ export default function MemberOrders() {
                 </div>
             </PageHeader>
 
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto">
                 {loading ? (
                     <p className="text-gray-400 text-center py-8">Loading your orders...</p>
                 ) : orders.length === 0 ? (
@@ -70,7 +70,7 @@ export default function MemberOrders() {
                         <p className="text-gray-400 text-sm">Head to "New Order" to make your first purchase!</p>
                     </div>
                 ) : (
-                    <table className="w-full text-left">
+                    <table className="w-full text-left min-w-[640px]">
                         <thead className="bg-gray-50">
                             <tr className="text-gray-400">
                                 <th className="p-4 font-medium"></th>

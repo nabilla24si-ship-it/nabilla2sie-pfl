@@ -74,11 +74,11 @@ export default function Orders() {
         </button>
       </PageHeader>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto">
         {loading ? (
           <p className="text-gray-400 text-center py-8">Loading orders...</p>
         ) : (
-          <table className="w-full text-left">
+          <table className="w-full text-left min-w-[768px]">
             <thead className="bg-gray-50">
               <tr className="text-gray-400">
                 <th className="p-4 font-medium">Order ID</th>

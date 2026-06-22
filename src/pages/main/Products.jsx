@@ -112,11 +112,11 @@ export default function Products() {
                 </div>
             )}
 
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto">
                 {loading ? (
                     <p className="text-gray-400 text-center py-8">Loading products...</p>
                 ) : (
-                    <table className="w-full text-left">
+                    <table className="w-full text-left min-w-[640px]">
                         <thead className="bg-gray-50">
                             <tr className="text-gray-400">
                                 <th className="p-4 font-medium">Code</th>
