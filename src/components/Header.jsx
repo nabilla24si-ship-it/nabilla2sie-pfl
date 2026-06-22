@@ -2,9 +2,14 @@ import { useState } from "react";
 import { FaBell, FaSearch, FaTimes } from "react-icons/fa";
 import { FcAreaChart } from "react-icons/fc";
 import { SlSettings } from "react-icons/sl";
+import { useAuth } from "../context/AuthContext";
 
 export default function Header() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const { profile } = useAuth();
+
+    const displayName = profile?.full_name || profile?.email || 'User';
+    const roleBadge = profile?.role || 'Guest';
 
     return (
         <div id="header-container">
@@ -53,7 +58,12 @@ export default function Header() {
 
                 <div id="profile-container">
                     <span id="profile-text">
-                        Hello, <b>Nabilla Suharman</b>
+                        Hello, <b>{displayName}</b>
+                    </span>
+                    <span className={`px-2 py-1 rounded-full text-[10px] font-bold ${
+                        roleBadge === 'Admin' ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'
+                    }`}>
+                        {roleBadge}
                     </span>
                     <img
                         id="profile-avatar"
